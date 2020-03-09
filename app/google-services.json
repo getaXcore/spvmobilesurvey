@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "725022533339",
+    "firebase_url": "https://spv-olympindo.firebaseio.com",
+    "project_id": "spv-olympindo",
+    "storage_bucket": "spv-olympindo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725022533339:android:95d63aac7fc3c7c5",
+        "android_client_info": {
+          "package_name": "com.olympindo.spvolympindo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725022533339-oqji26uhasib90mdqilu6rqlvjfjbp8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkAHelT0wJuLlH8Bi7iYoZcTEOavIkJYs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

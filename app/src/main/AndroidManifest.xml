@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.olympindo.spvolympindo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleInstance"/>
+        <activity
+            android:name=".Home"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListOrder"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="List Order"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DetailOrder"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Detail Order"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ListSurveyor"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="List Surveyor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DetailSurveyor"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Detail Surveyor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".AddOrder"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Add Order"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service
+            android:name=".service.BackgroundService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".service.BackgroundRestarterBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped">
+            <intent-filter>
+                <action android:name="com.olympindo.spvolympindo.ActivityRecognition.RestartSensor" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ListSearchSurveyor"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Search Surveyor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ListSearchDealer"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Search Dealer"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ListSearchMerkKendaraan"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Search Merk Kendaraan"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ListSearchModelKendaraan"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Search Model Kendaraan"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ListSearchTypeKendaraan"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Search Type Kendaraan"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

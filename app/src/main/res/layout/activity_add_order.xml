@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+        <ImageView
+            android:layout_below="@+id/toolbar"
+            android:background="@color/indigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_garis_nav2"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="25dp"
+                    android:text="@string/informasi_customer"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"></View>
+
+                <!-- Field Nomor KTP -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nomor_ktp"/>
+                    <EditText
+                        android:hint="@string/nomor_ktp"
+                        android:id="@+id/et_nomor_ktp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:inputType="number"
+                        android:maxLength="16"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Order No -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_no"/>
+                    <EditText
+                        android:enabled="false"
+                        android:hint="@string/order_no"
+                        android:id="@+id/et_order_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+
+                <!-- Field Nama Lengkap -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nama_lengkap"/>
+                    <EditText
+                        android:hint="@string/nama_lengkap"
+                        android:id="@+id/et_nama_lengkap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Jenis Kelamin -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jenis_kelamin"/>
+                    <RadioGroup
+                        android:id="@+id/radio_jenis_kelamin"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rb_male"
+                            android:checked="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dp"
+                            android:text="@string/male"/>
+                        <RadioButton
+                            android:id="@+id/rb_female"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="@string/female"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+
+
+                <!-- Field Nomor Telepon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nomor_telepon"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:inputType="number"
+                            android:hint="@string/kode"
+                            android:id="@+id/et_kode_nomor_telepon"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                        <EditText
+                            android:inputType="number"
+                            android:hint="@string/nomor_telepon"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/et_nomor_telepon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Field Nomor Telepon Rumah -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nomor_telepon_rumah"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:inputType="number"
+                            android:hint="@string/kode"
+                            android:id="@+id/et_kode_nomor_telepon_rumah"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                        <EditText
+                            android:inputType="number"
+                            android:hint="@string/nomor_telepon_rumah"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/et_nomor_telepon_rumah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!-- Field Cabang -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cabang"/>
+                    <EditText
+                        android:enabled="false"
+                        android:hint="@string/cabang"
+                        android:id="@+id/et_cabang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Dealer -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dealer"/>
+                    <EditText
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:hint="@string/pilih_dealer"
+                        android:id="@+id/et_dealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dealer"/>
+                    <Spinner
+                        android:id="@+id/spinner_dealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>-->
+
+                <!-- Field Description -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alamat_survey"/>
+                    <EditText
+                        android:hint="@string/alamat_survey"
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Photo Ktp -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/photo_ktp"/>
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:id="@+id/photo_id"
+                        android:src="@drawable/foto_customer_id_red"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!-- Field Surveyor -->
+            <!--<LinearLayout
+                android:visibility="gone"
+                android:id="@+id/box_tv_s_surveyor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/surveyor"/>
+
+                <Spinner
+                    android:id="@+id/spinner_surveyor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@android:color/black"></Spinner>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eaeaea"></View>
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="25dp"
+                    android:text="@string/informasi_pinjaman"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"></View>
+
+                <!-- Field Surveyor -->
+                <LinearLayout
+                    android:id="@+id/box_tv_s_jenis_pinjaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jenis_pinjaman"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_jenis_pinjaman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+                <!-- Field Pilih Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_pilih_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_kendaraan"/>
+                    <Spinner
+                        android:id="@+id/spinner_pilih_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+                <!-- Field Jaminan Multiguna -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_jaminan_multiguna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jaminan_multiguna"/>
+                    <Spinner
+                        android:id="@+id/spinner_jaminan_multiguna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+
+                <!-- Field Jumlah Pinjaman Dana Tunai -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_jumlah_pinjaman_dana_tunai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jumlah_pinjaman_dana_tunai"/>
+                    <EditText
+                        android:inputType="number"
+                        android:hint="@string/jumlah_pinjaman_dana_tunai"
+                        android:id="@+id/et_jumlah_pinjaman_dana_tunai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Jumlah Tenor Dana -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_jumlah_tenor_dana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jumlah_tenor_dana"/>
+                    <Spinner
+                        android:id="@+id/spinner_jumlah_tenor_dana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+
+
+                <!-- Field Garis Jaminan Kendaraan Multiguna -->
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/box_garis_jaminan_kendaraan_multiguna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="25dp"
+                        android:text="@string/garis_jaminan_kendaraan_multiguna"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"></View>
+                </LinearLayout>
+
+
+                <!-- Field Pilih Merk Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_pilih_merk_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_merk_kendaraan"/>
+
+                    <EditText
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:hint="@string/pilih_merk_kendaraan"
+                        android:id="@+id/et_merk_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                    <!--<Spinner
+                        android:id="@+id/spinner_pilih_merk_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>-->
+                </LinearLayout>
+
+
+                <!-- Field Pilih Model Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_pilih_model_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_model_kendaraan"/>
+                    <EditText
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:hint="@string/pilih_model_kendaraan"
+                        android:id="@+id/et_model_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                    <!--<Spinner
+                        android:id="@+id/spinner_pilih_model_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>-->
+                </LinearLayout>
+
+
+                <!-- Field Pilih Type Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_pilih_type_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_type_kendaraan"/>
+
+                    <EditText
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:hint="@string/pilih_type_kendaraan"
+                        android:id="@+id/et_type_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+
+                    <!--<Spinner
+                        android:id="@+id/spinner_pilih_type_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>-->
+                </LinearLayout>
+
+
+                <!-- Field Pilih Warna Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_pilih_warna_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_warna_kendaraan"/>
+                    <Spinner
+                        android:id="@+id/spinner_pilih_warna_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+
+                <!-- Field Pilih Tahun Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_pilih_tahun_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_tahun_kendaraan"/>
+                    <Spinner
+                        android:id="@+id/spinner_pilih_tahun_kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+
+                <!-- Field Plat Kendaraan -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_plat_kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plat_kendaraan"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/et_plat_kendaraan1"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                        <EditText
+                            android:inputType="number"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/et_plat_kendaraan2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                        <EditText
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/et_plat_kendaraan3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Field Garis Data Pinjaman -->
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/box_garis_data_pinjaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="25dp"
+                        android:text="@string/garis_data_pinjaman"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"></View>
+                </LinearLayout>
+
+
+                <!-- Field Nilai OTR -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_nilai_otr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nilai_otr"/>
+                    <EditText
+                        android:inputType="number"
+                        android:hint="@string/nilai_otr"
+                        android:id="@+id/et_nilai_otr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Total Down Payment -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_total_down_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_down_payment"/>
+                    <EditText
+                        android:inputType="number"
+                        android:hint="@string/total_down_payment"
+                        android:id="@+id/et_total_down_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+                <!-- Field Tenor -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_tenor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tenor"/>
+                    <Spinner
+                        android:id="@+id/spinner_tenor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+
+                <!-- Field Asuransi -->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/box_asuransi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/asuransi"/>
+                    <Spinner
+                        android:id="@+id/spinner_asuransi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>
+
+
+
+
+                <!-- Field Surveyor -->
+                <LinearLayout
+                    android:id="@+id/box_surveyor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/surveyor"/>
+                    <EditText
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:hint="@string/pilih_surveyor"
+                        android:id="@+id/et_surveyor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+
+                <!-- Field Surveyor -->
+                <!--<LinearLayout
+                    android:id="@+id/box_surveyor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/surveyor"/>
+                    <Spinner
+                        android:id="@+id/spinner_surveyor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@android:color/black"></Spinner>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eaeaea"></View>
+                </LinearLayout>-->
+
+                <!-- Field Jenis Multiguna -->
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jenis_multiguna"/>
+                    <EditText
+                        android:hint="@string/jenis_multiguna"
+                        android:id="@+id/et_jenis_multiguna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+                </LinearLayout>-->
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_submit"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg3"
+                android:text="@string/simpan"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

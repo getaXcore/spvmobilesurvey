@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">SpvOlympindo</string>
+    <string name="version">Version </string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="new_order">New Order</string>
+    <string name="survey">Survey</string>
+    <string name="ar_valid">AR/Valid</string>
+    <string name="f9pd">F9PD</string>
+    <string name="process">Process</string>
+    <string name="approve">Approve</string>
+    <string name="rewards">Rewards</string>
+    <string name="reject">Reject</string>
+    <string name="more_info">More Info</string>
+    <string name="jml">-</string>
+    <string name="pencarian">Pencarian</string>
+    <string name="pencarian_order">Pencarian Order</string>
+    <string name="pencarian_surveyor">Pencarian Surveyor</string>
+    <string name="informasi_order">Informasi Order</string>
+    <string name="name">Name</string>
+    <string name="order_no">Order No</string>
+    <string name="tipe_identitas">Tipe Identitas</string>
+    <string name="nomor_identitas">Nomor Identitas</string>
+    <string name="alamat_rumah">Alamat Rumah</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="nomor_telepon_rumah">Nomor Telepon Rumah</string>
+    <string name="nomor_handphone">Nomor Handphone</string>
+    <string name="status_order">Status Order</string>
+
+
+    <string name="informasi_kredit">Informasi Kredit</string>
+    <string name="jenis_kredit">Jenis Kredit</string>
+    <string name="jumlah_pinjaman">Jumlah Pinjaman</string>
+    <string name="jaminan_multiguna">Jaminan Multiguna</string>
+    <string name="tenor">Tenor</string>
+
+
+    <string name="jaminan_kendaraan">Jaminan Kendaraan</string>
+    <string name="kategori_kendaraan">Kategori Kendaraan</string>
+    <string name="merk_kendaraan">Merk Kendaraan</string>
+    <string name="model_kendaraan">Model Kendaraan</string>
+    <string name="type_kendaraan">Type Kendaraan</string>
+    <string name="plat_nomor">Plat Nomor</string>
+    <string name="tahun">Tahun</string>
+    <string name="warna">Warna</string>
+    <string name="otr">OTR</string>
+    <string name="dp">DP</string>
+
+
+    <string name="informasi_surveyor">Informasi Surveyor</string>
+    <string name="cabang">Cabang</string>
+    <string name="dealer">Dealer</string>
+    <string name="pilih_dealer">Pilih Dealer</string>
+    <string name="update_status_customer">Update Status Customer</string>
+    <string name="status_customer">Status Customer</string>
+    <string name="description">Description</string>
+    <string name="surveyor">Surveyor</string>
+    <string name="pilih_surveyor">Pilih Surveyor</string>
+    <string name="simpan">Simpan</string>
+
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="alamat">Alamat</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="status_surveyor">Status Surveyor</string>
+    <string name="jumlah_tugas">Jumlah Tugas</string>
+
+
+    <string name="informasi_customer">Informasi Customer</string>
+    <string name="nomor_ktp">Nomor KTP</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="photo_ktp">Photo KTP</string>
+    <string name="kode">Kode</string>
+
+
+    <string name="title_activity_home">Home</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="informasi_pinjaman">Informasi Pinjaman</string>
+    <string name="jenis_pinjaman">Jenis Pinjaman</string>
+    <string name="jenis_multiguna">Jenis Multiguna</string>
+
+    <string name="pilih_kendaraan">Pilih Kendaraan</string>
+    <string name="jumlah_pinjaman_dana_tunai">Jumlah Pinjaman Dana Tunai</string>
+    <string name="jumlah_tenor_dana">Jumlah Tenor</string>
+    <string name="garis_jaminan_kendaraan_multiguna">Jaminan Kendaraan Multiguna</string>
+    <string name="pilih_merk_kendaraan">Pilih Merk Kendaraan</string>
+    <string name="pilih_model_kendaraan">Pilih Model Kendaraan</string>
+    <string name="pilih_type_kendaraan">Pilih Type Kendaraan</string>
+    <string name="pilih_warna_kendaraan">Pilih Warna Kendaraan</string>
+    <string name="pilih_tahun_kendaraan">Pilih Tahun Kendaraan</string>
+    <string name="plat_kendaraan">Plat Kendaraan</string>
+    <string name="garis_data_pinjaman">Data Pinjaman</string>
+    <string name="nilai_otr">Nilai OTR</string>
+    <string name="total_down_payment">Total Down Payment</string>
+    <string name="asuransi">Asuransi</string>
+    <string name="pencairan_dana">Pencairan Dana</string>
+
+
+    <string name="jtrust">J Trust Group</string>
+    <string name="detail_desc_ss">PT. JTrust Olympindo Multi Finance is registered and supervised by</string>
+    <string name="detail_desc_ss2">Copyright 2018 JTO Finance All right reserved</string>
+
+    <string name="alamat_survey">Alamat Survey</string>
+    <string name="pencarian_dealer">Pencarian Dealer</string>
+    <string name="pencarian_merk_kendaraan">Pencarian Merk Kendaraan</string>
+    <string name="pencarian_model_kendaraan">Pencarian Model Kendaraan</string>
+    <string name="pencarian_type_kendaraan">Pencarian Type Kendaraan</string>
+</resources>

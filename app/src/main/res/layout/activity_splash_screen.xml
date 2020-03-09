@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_jtomos_new"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/bt_tengah"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo_jtodis_24"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/bt_tengah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/tx_jtrust"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/jtrust"/>
+
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_below="@+id/tx_jtrust"
+            android:id="@+id/box_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_jto"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:src="@drawable/logo_jto_bawah"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/img_jto"
+                android:textColor="@android:color/white"
+                android:id="@+id/tx_detail_desc"
+                android:textSize="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_desc_ss"/>
+            <TextView
+                android:layout_below="@id/tx_detail_desc"
+                android:layout_toRightOf="@+id/img_jto"
+                android:layout_toLeftOf="@+id/img_ojk"
+                android:textColor="@android:color/white"
+                android:id="@+id/tx_detail_desc2"
+                android:textSize="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_desc_ss2"/>
+            <ImageView
+                android:layout_toRightOf="@+id/tx_detail_desc"
+                android:id="@+id/img_ojk"
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/logo_ojk"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/box_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@+id/tx_version"
+                android:textSize="15dp"
+                android:layout_toLeftOf="@+id/batas_text"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/version"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/batas_text"/>
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@+id/tx_detail_version"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/batas_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"/>
+        </RelativeLayout>
+        </RelativeLayout>
+
+
+
+</RelativeLayout>
